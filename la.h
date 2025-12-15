@@ -1000,8 +1000,8 @@ LADEF V2f v2f_norm(V2f a, float eps, V2f fallback)
 
 LADEF bool v2f_eq(V2f a, V2f b, float eps)
 {
-    if (fabsf(b.x - a.x) <= eps) return false;
-    if (fabsf(b.y - a.y) <= eps) return false;
+    if (fabsf(b.x - a.x) > eps) return false;
+    if (fabsf(b.y - a.y) > eps) return false;
     return true;
 }
 
@@ -1294,8 +1294,8 @@ LADEF V2d v2d_norm(V2d a, double eps, V2d fallback)
 
 LADEF bool v2d_eq(V2d a, V2d b, double eps)
 {
-    if (fabs(b.x - a.x) <= eps) return false;
-    if (fabs(b.y - a.y) <= eps) return false;
+    if (fabs(b.x - a.x) > eps) return false;
+    if (fabs(b.y - a.y) > eps) return false;
     return true;
 }
 
@@ -2070,9 +2070,9 @@ LADEF V3f v3f_cross(V3f a, V3f b)
 
 LADEF bool v3f_eq(V3f a, V3f b, float eps)
 {
-    if (fabsf(b.x - a.x) <= eps) return false;
-    if (fabsf(b.y - a.y) <= eps) return false;
-    if (fabsf(b.z - a.z) <= eps) return false;
+    if (fabsf(b.x - a.x) > eps) return false;
+    if (fabsf(b.y - a.y) > eps) return false;
+    if (fabsf(b.z - a.z) > eps) return false;
     return true;
 }
 
@@ -2429,9 +2429,9 @@ LADEF V3d v3d_cross(V3d a, V3d b)
 
 LADEF bool v3d_eq(V3d a, V3d b, double eps)
 {
-    if (fabs(b.x - a.x) <= eps) return false;
-    if (fabs(b.y - a.y) <= eps) return false;
-    if (fabs(b.z - a.z) <= eps) return false;
+    if (fabs(b.x - a.x) > eps) return false;
+    if (fabs(b.y - a.y) > eps) return false;
+    if (fabs(b.z - a.z) > eps) return false;
     return true;
 }
 
@@ -3328,10 +3328,10 @@ LADEF V4f v4f_norm(V4f a, float eps, V4f fallback)
 
 LADEF bool v4f_eq(V4f a, V4f b, float eps)
 {
-    if (fabsf(b.x - a.x) <= eps) return false;
-    if (fabsf(b.y - a.y) <= eps) return false;
-    if (fabsf(b.z - a.z) <= eps) return false;
-    if (fabsf(b.w - a.w) <= eps) return false;
+    if (fabsf(b.x - a.x) > eps) return false;
+    if (fabsf(b.y - a.y) > eps) return false;
+    if (fabsf(b.z - a.z) > eps) return false;
+    if (fabsf(b.w - a.w) > eps) return false;
     return true;
 }
 
@@ -3716,10 +3716,10 @@ LADEF V4d v4d_norm(V4d a, double eps, V4d fallback)
 
 LADEF bool v4d_eq(V4d a, V4d b, double eps)
 {
-    if (fabs(b.x - a.x) <= eps) return false;
-    if (fabs(b.y - a.y) <= eps) return false;
-    if (fabs(b.z - a.z) <= eps) return false;
-    if (fabs(b.w - a.w) <= eps) return false;
+    if (fabs(b.x - a.x) > eps) return false;
+    if (fabs(b.y - a.y) > eps) return false;
+    if (fabs(b.z - a.z) > eps) return false;
+    if (fabs(b.w - a.w) > eps) return false;
     return true;
 }
 
